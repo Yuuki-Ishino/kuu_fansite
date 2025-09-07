@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import dayjs from "dayjs";
 import ConvertApi from "convertapi-js";
 
+
 export async function addActivity(formData) {
 	console.log(formData);
 	const title = formData.get("title");
@@ -24,25 +25,25 @@ export async function addActivity(formData) {
 
 		let uploadFile = file;
 
-		const ext = file.name.split(".").pop().toLowerCase();
-		if (ext === "heic" || ext === "heif") {
-			const convertApi = ConvertApi.auth(process.env.CONVERT_API_KEY);
+		// const ext = file.name.split(".").pop().toLowerCase();
+		// if (ext === "heic" || ext === "heif") {
+		// 	const convertApi = ConvertApi.auth(process.env.CONVERT_API_KEY);
 
-			const params = convertApi.createParams();
-			params.add("File", file);
+		// 	const params = convertApi.createParams();
+		// 	params.add("File", file);
 
-			const result = await convertApi.convert("heic", "jpg", params);
-			const jpgUrl = result.files[0].Url;
+		// 	const result = await convertApi.convert("heic", "jpg", params);
+		// 	const jpgUrl = result.files[0].Url;
 
-			const jpgRes = await fetch(jpgUrl);
-			const jpgBlob = await jpgRes.blob();
+		// 	const jpgRes = await fetch(jpgUrl);
+		// 	const jpgBlob = await jpgRes.blob();
 
-			uploadFile = new File(
-				[jpgBlob],
-				file.name.replace(/\.(heic|heif)$/i, ".jpg"),
-				{type: "image/jpeg"}
-			);
-		}
+		// 	uploadFile = new File(
+		// 		[jpgBlob],
+		// 		file.name.replace(/\.(heic|heif)$/i, ".jpg"),
+		// 		{type: "image/jpeg"}
+		// 	);
+		// }
 
 		const fileName = `${dayjs().format("YYYYMMDD_HHmmss")}-${uploadFile.name}`;
 		const arrayBuffer = await uploadFile.arrayBuffer();
