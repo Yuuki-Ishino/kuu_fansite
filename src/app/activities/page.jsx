@@ -1,7 +1,10 @@
-import ActivitySection from './ActivitySection';
+"use server";
 
-export default function Page( timeFilter ) {
-  return (
+import ActivitySection from './ActivitySection';
+import { redirect } from 'next/navigation';
+
+export default async function Page() {
+	return (
 		<>
 			<section className="pt-[70px]">
 				<ActivitySection />

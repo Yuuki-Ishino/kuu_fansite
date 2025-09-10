@@ -10,6 +10,7 @@ function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navItems = [
+    {href: '/login', label: 'ログイン'},
     {href: '/about_us', label: '私たちについて'},
     {href: '/intro', label: '活動紹介'},
     {href: '/activities', label: '活動一覧'},

@@ -1,6 +1,7 @@
-import { supabase } from "../utils/supabase/client";
+import { createClient } from "$/utils/supabase/client";
 import nowJST from "@/app/components/Day";
 
+const supabase = createClient();
 // 活動全データ取得
 export async function getAllActivities() {
   const { data, error } = await supabase
