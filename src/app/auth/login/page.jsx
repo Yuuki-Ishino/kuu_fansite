@@ -7,7 +7,7 @@ export default function LoginPage() {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: 'http://localhost:3000/auth/callback', // OAuth完了後に戻るページ
+        redirectTo: '/auth/callback', // OAuth完了後に戻るページ
       },
     });
   };
