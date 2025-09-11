@@ -9,7 +9,7 @@ export default async function addActivityForm() {
     console.log("data : " + session);
     
     if (!session) {
-      redirect("/login");
+      redirect("/auth/login");
     }
   
 	return (

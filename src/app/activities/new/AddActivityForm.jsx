@@ -4,10 +4,13 @@ import { useState } from "react";
 import imageCompression from "browser-image-compression";
 import { addActivity } from "./action";
 import { useFormStatus } from "react-dom";
+import { createClient } from "$/utils/supabase/client";
+import dayjs from "dayjs";
 
 export default function AddActivityForm() {
 	const [file, setFile] = useState(null);
 	const { pending } = useFormStatus();
+	const supabase = createClient();
 
 	const handleFileChange = async (e) => {
 		const selectedFile = e.target.files[0];
@@ -29,9 +32,19 @@ export default function AddActivityForm() {
 	};
 
 	const handleSubmit = async (formData) => {
+		let imageUrl = null;
+		
 		if (file) {
-			formData.set("image", file);
+			const fileName = `${dayjs().format("YYYYMMDD_HHmmss")}-${file.name}`;
+			const {error} = await supabase.storage
+				.from("activity-imgs")
+				.upload(fileName, file, { contentType: file.type});
+			if (error) throw error;
+
+			const {data} = supabase.storage.from("activity-imgs").getPublicUrl(fileName);
+			imageUrl = data.publicUrl;
 		}
+		formData.set("imageUrl", imageUrl);
 		await addActivity(formData);
 	};
 

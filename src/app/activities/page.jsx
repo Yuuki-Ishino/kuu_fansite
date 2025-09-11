@@ -1,7 +1,4 @@
-"use server";
-
 import ActivitySection from './ActivitySection';
-import { redirect } from 'next/navigation';
 
 export default async function Page() {
 	return (
