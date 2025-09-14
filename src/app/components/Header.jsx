@@ -40,16 +40,24 @@ function Header() {
 	const toggleMenu = () => setIsOpen(!isOpen);
 
 	if (loading) {
-		return null;
+		return null
 	}
 
-	const navItems = [
+	const baseNavItems = [
 		session ? {href: '/auth/logout', label: 'ログアウト'} : {href: '/auth/login', label: 'ログイン'},
 		{href: '/about_us', label: '私たちについて'},
 		{href: '/intro', label: '活動紹介'},
 		{href: '/activities', label: '活動一覧'},
 		{href: '/#contact', label: 'お問い合わせ'},
-		...(admin ? [{href: '/activities/new', label: '記事作成'}] : []),
+	];
+
+	const adminNavItems = [
+		{href: '/admin/new', label: '記事作成'},
+	];
+
+	const navItems = [
+		...baseNavItems,
+		...(admin ? adminNavItems : []),
 	];
 
 	const renderNavItems = () =>
@@ -86,7 +94,7 @@ function Header() {
 			<div className="lg:hidden mr-5 active:bg-gray-700">
 			{isOpen ? (
 				<button onClick={toggleMenu} className="focus:outline-none">
-				<div className="w-6 h-0.5">X</div>
+				<div className="w-6 h-0.5 font-bold">X</div>
 				<div className="w-6 h-0.5"></div>
 				</button>
 			) : (

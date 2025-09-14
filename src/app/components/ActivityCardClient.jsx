@@ -15,12 +15,12 @@ export default function ActivityCardClient({ activity }) {
 				<img
 					src={activity.imageUrl}
 					alt={activity.alt}
-					className="w-full h-[225px] rounded-[20px] hover:opacity-70 active:opaicty-70"
+					className="w-full h-[225px] rounded-[20px] object-cover hover:opacity-70 active:opacity-70"
 				/>
-				<p className="bg-white/80 text-black font-bold inline-block absolute bottom-[6px] left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-[10px]">
+				<p className="bg-white/80 text-black font-bold inline-block shadow-black absolute bottom-[6px] left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-[10px]">
 					{activity.title}
 				</p>
-				<p className="bg-white/80 text-black font-bold inline-block absolute top-[10px] right-[10px] px-1.5 py-2 rounded-[10px]">
+				<p className="bg-white/80 text-black font-bold inline-block shadow-md absolute top-[10px] right-[10px] px-1.5 py-2 rounded-[10px]">
 					{activity.date}
 				</p>
 			</div>

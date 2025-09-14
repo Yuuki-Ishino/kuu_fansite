@@ -1,21 +1,18 @@
+"use client";
+
 import { createClient } from "./client";
 
 export async function getUserRole() {
-	const supabase = createClient();
+  const supabase = createClient();
 
-	const {data: {session}} = await supabase.auth.getSession();
-	if (!session)  return null;
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return null;
 
-	const {data, error} = await supabase
-		.from("profiles")
-		.select("role")
-		.eq("uid", session.user.id)
-		.single();
-	
-	if (error) {
-		console.error("getUserRole error", error.message);
-		return null;
-	}
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("uid", user.id)
+    .single();
 
-	return data.role;
+  return profile?.role ?? null;
 }
