@@ -6,6 +6,7 @@ import { createClient } from "$/utils/supabase/client";
 import { useFormStatus } from "react-dom";
 import dayjs from "dayjs";
 import { updateActivity } from "./updateActivity";
+import { redirect } from "next/navigation";
 
 export default function EditActivityForm({ activity }) {
   const supabase = createClient();
@@ -78,6 +79,7 @@ export default function EditActivityForm({ activity }) {
 
     // ここで update API / Server Action を呼ぶ
     await updateActivity(activity.id, formData);
+    redirect("/activities");
   };
 
   return (

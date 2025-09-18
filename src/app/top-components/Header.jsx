@@ -49,8 +49,9 @@ function Header() {
     session
       ? { href: "/auth/logout", label: "ログアウト" }
       : { href: "/auth/login", label: "ログイン" },
-    { href: "/about_us", label: "私たちについて" },
-    { href: "/intro", label: "活動紹介" },
+    { href: "/aboutUs", label: "私たちについて" },
+    { href: "/members", label: "メンバー紹介" },
+    // { href: "/intro", label: "活動紹介" },
     { href: "/activities", label: "活動一覧" },
     { href: "/#contact", label: "お問い合わせ" },
   ];
