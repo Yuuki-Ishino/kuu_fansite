@@ -20,8 +20,6 @@ export default function AboutUs() {
           image="/images/candle01.jpg"
         />
 
-        
-
         {/* セクション4: お問い合わせ */}
         <Section
           title="お問い合わせ"

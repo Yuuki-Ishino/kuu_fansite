@@ -111,13 +111,20 @@ export default function AddActivityForm() {
           required
         />
 
+        {/* 募集人数 */}
+        <input
+          type="number"
+          name="capacity"
+          placeholder="募集人数"
+          className="bg-transparent border border-white/20 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
         {/* 参加人数 */}
         <input
           type="number"
           name="numPeople"
           placeholder="参加人数"
           className="bg-transparent border border-white/20 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
         />
       </div>
 

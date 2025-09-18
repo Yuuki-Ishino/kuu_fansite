@@ -18,6 +18,7 @@ export default function EditActivityForm({ activity }) {
     title: activity.title,
     date: activity.date,
     location: activity.location,
+    capacity: activity.capacity,
     numPeople: activity.numPeople,
     description: activity.description,
     imageUrl: activity.imageUrl,
@@ -140,6 +141,17 @@ export default function EditActivityForm({ activity }) {
           onChange={handleChange}
           value={formData.location ?? ""}
           placeholder="場所"
+          className="bg-transparent border border-white/20 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+
+        {/* 募集人数 */}
+        <input
+          type="number"
+          name="capacity"
+          onChange={handleChange}
+          value={formData.capacity ?? ""}
+          placeholder="募集人数"
           className="bg-transparent border border-white/20 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
