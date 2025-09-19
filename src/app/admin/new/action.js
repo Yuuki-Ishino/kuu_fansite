@@ -2,15 +2,14 @@
 
 import { createClient } from "$/utils/supabase/server";
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 
 export async function addActivity(formData) {
   const supabase = createClient();
 
-  let imageUrl = null;
+  let imageUrl = "/images/nothing.jpg";
   const imageFile = formData.get("image");
 
-  if (imageFile) {
+  if (imageFile && imageFile.size > 0) {
     const fileName = imageFile.name;
     const { error: uploadError } = await supabase.storage
       .from("activity-imgs")

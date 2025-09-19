@@ -21,7 +21,11 @@ export default function CallbackPage() {
       }
 
       const user = session.user;
-      console.log(user);
+
+      if (!user.email.endsWith("@toyo.jp")) {
+        router.replace("/auth/logout");
+        return;
+      }
 
       try {
         // profiles に存在するか確認
@@ -53,7 +57,7 @@ export default function CallbackPage() {
         }
 
         // 成功したらトップページへ
-        router.replace("/");
+        router.replace("/auth/logout");
       } catch (err) {
         console.error("ログイン後処理でエラー:", err);
       }

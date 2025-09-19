@@ -46,7 +46,7 @@ export default function AddActivityForm() {
 				const blobFile = new File([file], fileName, { type: file.type});
 				formData.set("image", blobFile);
 			}
-
+			
 			await addActivity(formData);
 			window.location.href = "/activities";
 		} catch (err) {
@@ -55,29 +55,6 @@ export default function AddActivityForm() {
 		} finally {
 			setSubmitting(false);
 		}
-
-		// try {
-		// 	let imageUrl = null;
-
-		// 	if (file) {
-		// 		const fileName = `${dayjs().format("YYYYMMDD_HHmmss")}-${file.name}`;
-		// 		const { error } = await supabase.storage
-		// 			.from("activity-imgs")
-		// 			.upload(fileName, file, { contentType: file.type });
-		// 		if (error) throw error;
-
-		// 		const { data } = supabase.storage
-		// 			.from("activity-imgs")
-		// 			.getPublicUrl(fileName);
-		// 		imageUrl = data.publicUrl;
-		// 	}
-
-		// 	formData.delete("image");
-		// 	formData.set("imageUrl", imageUrl);
-		// 	await addActivity(formData);
-		// } finally {
-		// 	setSubmitting(false);
-		// }
   };
 
   return (
