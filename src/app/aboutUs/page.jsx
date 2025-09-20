@@ -1,6 +1,14 @@
-// app/about_us/page.tsx
 import Section from "../components/section";
-import TeamCard from "../components/teamCard";
+
+export const metadata = {
+  title: "Bboothについて | 東洋大学ボランティアサークル",
+  description: "Bboothは東洋大学公認のボランティアサークルです。2011年の東日本大震災をきっかけに発足し、「忘れないをカタチに。」をモットーに地域や他団体と連携した活動を続けています。ともしびプロジェクトや毎月11日のキャンドル活動など、学生主体の社会貢献活動を紹介します。",
+  openGraph: {
+    title: "Bboothについて | 東洋大学ボランティアサークル",
+    description: "東洋大学ボランティアサークルBbooth。サークル発足理由、活動内容を紹介しています。",
+    images: ["/images/logo02.jpg"],
+  },
+};
 
 export default function AboutUs() {
   return (
@@ -8,9 +16,9 @@ export default function AboutUs() {
       <div className="py-16 px-6">
         {/* トップ */}
         <Section
-          title="Bbooth"
+          title="Bboothとは"
           description={`東洋大学公認ボランティアサークルBboothです。\n\n2011年3月11日の東日本大震災を機に発足し、「忘れないをカタチに。」をモットーに現在まで活動を続けています。\n\n震災、災害の悲惨さを風化させない。\n\n一人ひとりができることを考え、地域や他団体との連携を通じて、人と人との繋がりを大切にした活動を続けています。`}
-          image="/images/logo01.jpg"
+          image="/images/logo02.jpg"
         />
 
         {/* ともしび */}

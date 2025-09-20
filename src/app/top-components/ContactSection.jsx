@@ -7,7 +7,7 @@ function ContactSection() {
         <div className="flex flex-col justify-between">
           {/* メッセージ */}
           <div className="">
-            <p className="text-[20px] font-bold mb-5">CONTACT</p>
+            <h3 className="text-[20px] font-bold mb-5">CONTACT</h3>
             <h2 className="text-[30px] font-bold mb-10">お問い合わせ</h2>
             <p className="leading-[1.8] mb-[20px]">
               ボランティアの依頼・相談は以下の公式Instagramまでご連絡ください。

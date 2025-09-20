@@ -10,8 +10,8 @@ export default async function ActivitySection() {
     <section className="text-white pt-20 lg:py-20">
       <div className="w-[90%] mx-auto max-w-[1280px] pb-20 border-b border-white">
         
-        <p className="text-[20px] font-bold mb-5">PAST ACTIVITIES</p>
-        <p className="text-[30px] font-bold mb-[14px]">今までの活動</p>
+        <h3 className="text-[20px] font-bold mb-5">PAST ACTIVITIES</h3>
+        <h2 className="text-[30px] font-bold mb-[14px]">今までの活動</h2>
         <div className="flex flex-col lg:flex-row justify-between">
           {pastItems.map((item) => (
             <ActivityCardClient key={item.id} activity={item} />
@@ -26,9 +26,9 @@ export default async function ActivitySection() {
 
         {/* 未来の活動 */}
         {/* サブタイトル */}
-        <p className="text-[20px] font-bold mb-5">UPCOMING ACTIVITIES</p>
+        <h3 className="text-[20px] font-bold mb-5">UPCOMING ACTIVITIES</h3>
         {/* タイトル */}
-        <p className="text-[30px] font-bold mb-[14px]">これからの活動</p>
+        <h2 className="text-[30px] font-bold mb-[14px]">これからの活動</h2>
         {/* カード一覧 */}
         <div className="flex flex-col lg:flex-row justify-between ">
           {latestItems.map((item) => (

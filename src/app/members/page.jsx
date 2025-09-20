@@ -1,5 +1,15 @@
 import TeamCard from "../components/teamCard";
 
+export const metadata = {
+  title: "Bboothメンバー紹介ページ | 東洋大学ボランティアサークル",
+  description: "Bboothのメンバーを紹介するページ。役職や特徴と画像を貼り付け、このページでどのような人が活動し、役職を担っているのかを確認することができます。",
+	openGraph: {
+    title: "Bboothメンバー紹介ページ | 東洋大学ボランティアサークル",
+    description: "東洋大学ボランティアサークルBboothのメンバー紹介ページ。",
+    images: ["/images/10th_img.jpg"],
+  },
+};
+
 export default function memberIntro(){
 	return(
 		<section className="py-25">

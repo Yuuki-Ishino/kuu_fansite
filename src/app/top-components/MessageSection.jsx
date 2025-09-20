@@ -23,17 +23,17 @@ function MessageSection() {
             <p className="text-[20px] leading-[1.8] mb-10">
               「忘れないをカタチに」し続け、 2025年も無事活動できています。
               <br />
+              <br />
               やる時はやる、遊んで楽しむ時は楽しむ、
               そんなメリハリを大切にしています。
               <br />
               <br />
               ボランティアをもっと身近に、
-              <br />
-              ところで、お前も鬼にならないか？
+              そして想いを伝え、繋いでいく。
               <br />
             </p>
             <div className="flex justify-center">
-              <Button href="/aboutUs">SEE MORE</Button>
+              <Button href="/aboutUs">READ MORE</Button>
             </div>
           </div>
         </div>
