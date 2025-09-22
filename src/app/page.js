@@ -3,6 +3,7 @@ import MainVisual from "./top-components/MainVisual";
 import MessageSection from "./top-components/MessageSection";
 import ActivitySection from "./top-components/ActivitySection";
 import ContactSection from "./top-components/ContactSection";
+import TimeSchedule from "./top-components/schedule";
 
 export const metadata = {
   title: "Bboothトップページ | 東洋大学ボランティアサークル",
@@ -19,6 +20,7 @@ export default function Page() {
     <div className="bg-img">
       <MainVisual />
       <MessageSection />
+      <TimeSchedule />
       <ActivitySection />
       <ContactSection imageSrc="/images/top-image.jpg" />
     </div>

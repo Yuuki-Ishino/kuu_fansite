@@ -4,6 +4,10 @@ import { getUserRole } from "$/utils/supabase/getUserRole";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
+import dayjs from "dayjs";
+import "dayjs/locale/ja";
+
+dayjs.locale("ja");
 
 export default function ActivityModal({ activity, onClose }) {
   const [role, setRole] = useState(null);
@@ -61,7 +65,10 @@ export default function ActivityModal({ activity, onClose }) {
           {/* 投稿情報 */}
           <div className="py-4 space-y-3 border-b border-white">
             <div className="flex items-center gap-2">
-              <p>活動日: {activity.date || "未確定"}</p>
+              <p>活動日: {
+              dayjs(activity.date).format("YYYY年M月D日(ddd)")
+              || "未確定"
+              }</p>
             </div>
             <div className="flex items-center gap-2">
               <p>活動場所: {activity.location || "未確定"}</p>

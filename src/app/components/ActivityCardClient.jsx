@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import dayjs from "dayjs";
+import "dayjs/locale/ja";
 import ActivityModal from "./ActivityModal";
+
+dayjs.locale("ja");
 
 export default function ActivityCardClient({ activity }) {
   const [selectedActivity, setSelectedActivity] = useState(null);
-
-  const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
-  const weekday = weekdays[dayjs(activity.date).day()];
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function ActivityCardClient({ activity }) {
           {activity.title}
         </p>
         <p className="bg-white text-black font-bold inline-block border-2 absolute top-[10px] right-[10px] px-1.5 py-2 rounded-[10px]">
-          {activity.date} ({weekday})
+          {dayjs(activity.date).format("M月D日(ddd)")}
         </p>
       </div>
 
