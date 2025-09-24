@@ -24,6 +24,7 @@ export async function addActivity(formData) {
     {
       title: formData.get("title"),
       date: formData.get("date"),
+      subdate: formData.get("subdate"),
       location: formData.get("location"),
       capacity: formData.get("capacity") || null,
       numPeople: formData.get("numPeople") || null,

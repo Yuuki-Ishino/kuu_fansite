@@ -34,7 +34,11 @@ export default function TimeSchedule() {
               onClick={() => setSelectedActivity(item)}
             >
               <p className="text-sm text-gray-300">
-                {dayjs(item.date).format("M月D日(ddd)")}
+                {item.date 
+                  ? item.subdate
+                    ? `${dayjs(item.date).format("M月D日(ddd)")} - ${dayjs(item.subdate).format("M月D日(ddd)")}`
+                    : dayjs(item.date).format("M月D日(ddd)")
+                  : "未確定"}
               </p>
               <h3 className="text-lg font-semibold">{item.title}</h3>
             </li>

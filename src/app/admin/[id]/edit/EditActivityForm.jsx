@@ -19,6 +19,7 @@ export default function EditActivityForm({ activity }) {
   const [formData, setFormData] = useState({
     title: activity.title,
     date: activity.date,
+    subdate: activity.subdate,
     location: activity.location,
     capacity: activity.capacity,
     numPeople: activity.numPeople,
@@ -141,6 +142,15 @@ export default function EditActivityForm({ activity }) {
           value={formData.date ?? ""}
           className="bg-transparent border border-white/20 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
+        />
+
+        {/* サブ日付 */}
+        <input
+          type="date"
+          name="subdate"
+          onChange={handleChange}
+          value={formData.subdate ?? ""}
+          className="bg-transparent border border-white/20 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         {/* 場所 */}
