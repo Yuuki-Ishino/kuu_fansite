@@ -23,7 +23,7 @@ export async function addActivity(formData) {
   const { error } = await supabase.from("activities").insert([
     {
       title: formData.get("title"),
-      date: formData.get("date"),
+      date: formData.get("date") || null,
       subdate: formData.get("subdate") || null,
       location: formData.get("location"),
       capacity: formData.get("capacity") || null,
