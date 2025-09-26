@@ -14,7 +14,14 @@ export const metadata = {
     "学生ボランティア",
   ],
   icons: {
-    icon: "/images/Bbooth_logo.ico",
+    icon: [
+      "/images/Bbooth_logo.ico",
+      { url: "/images/Bbooth_logo.ico", type: "image/x-icon"},
+      { url: "/images/Bbooth_logo.ico"},
+    ],
+    apple: [
+      { url: "/images/logo02.jpg", sizes: "180x180" },
+    ],
   },
   openGraph: {
     title: "Bbooth",
@@ -23,6 +30,14 @@ export const metadata = {
     siteName: "Bbooth",
     locale: "ja_JP",
     type: "website",
+    images: [
+      {
+        url: "/images/top-image.jpg",   // 共通OG画像（相対パスでOK）
+        width: 1200,
+        height: 630,
+        alt: "Bbooth サイトイメージ",
+      },
+    ],
   },
 };
 

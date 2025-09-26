@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["vqsvlqcvaktgngyoxuyp.supabase.co"], // ←ここに追加
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'vqsvlqcvaktgngyoxuyp.supabase.co', // Supabase Storage ドメイン
+        pathname: '/storage/v1/**', // バケット配下の全ての画像
+      },
+    ],
   },
 };
+
 export default nextConfig;
