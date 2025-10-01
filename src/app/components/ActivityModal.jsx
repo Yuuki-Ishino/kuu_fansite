@@ -29,7 +29,7 @@ export default function ActivityModal({ activity, onClose }) {
         onClick={onClose} // 背景クリックで閉じる
       >
         <div
-          className="bg-[#181619] text-white w-[95%] max-w-[800px] max-h-[80vh] overflow-auto rounded-lg p-4 relative"
+          className="bg-[#181619] text-white w-[95%] max-w-[800px] max-h-[95vh] lg:max-h-[95vh] overflow-auto rounded-lg p-4 relative"
           onClick={(e) => e.stopPropagation()} // 内側クリックは閉じない
         >
           {/* 編集ボタン */}
@@ -54,7 +54,7 @@ export default function ActivityModal({ activity, onClose }) {
           <img
             src={activity.imageUrl}
             alt={activity.alt}
-            className="w-full h-64 object-cover rounded-lg mt-8"
+            className="w-full h-64 md:h-100 lg:160 object-cover rounded-lg mt-8"
           />
 
           {/* タイトル */}

@@ -13,7 +13,7 @@ export default async function ActivitySection() {
         <p className="text-[30px] font-bold mb-[14px]">活動一覧</p>
 
         {/* カード一覧 */}
-        <div className="flex flex-col lg:flex-row justify-between ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {activities.map((item) => (
             <ActivityCardClient key={item.id} activity={item} />
           ))}

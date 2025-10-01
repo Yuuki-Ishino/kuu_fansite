@@ -26,7 +26,7 @@ export default function TimeSchedule() {
         <h3 className="text-[20px] font-bold mb-5">SCHEDULE</h3>
         <h2 className="text-[30px] font-bold mb-[14px]">活動予定</h2>
 
-        <ul className="w-[90%] mx-auto flex flex-col lg:flex-row justify-between">
+        <ul className="w-[90%] max-w-[400px] pl-5 flex flex-col justify-between">
           {latestItems.map((item) => (
             <li
               key={item.id}
