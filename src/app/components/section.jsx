@@ -8,7 +8,7 @@ export default function Section({ title, description, image, link, linkText }) {
         <div className="mb-8">
           <h2 className="text-3xl text-white font-semibold mb-4">{title}</h2>
           {image && (
-            <div className="w-full h-60 rounded-lg overflow-hidden mb-4 relative">
+            <div className="w-full h-60 lg:h-80 rounded-lg overflow-hidden mb-4 relative">
               <Image src={image} alt={title} fill className="object-cover" />
             </div>
           )}

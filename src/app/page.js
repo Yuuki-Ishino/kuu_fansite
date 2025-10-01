@@ -6,10 +6,10 @@ import ContactSection from "./top-components/ContactSection";
 import TimeSchedule from "./top-components/schedule";
 
 export const metadata = {
-  title: "Bbooth トップ| 東洋大学ボランティアサークル",
+  title: "Bbooth",
   description: "Bboothは東洋大学の学生が運営するボランティアサークルです。",
   openGraph: {
-    title: "Bbooth トップ| 東洋大学ボランティアサークル",
+    title: "Bbooth",
     description: "Bboothは東洋大学の学生が運営するボランティアサークルです。",
     images: ["/images/top-image.jpg"],
   },

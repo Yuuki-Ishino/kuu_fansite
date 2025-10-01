@@ -1,11 +1,11 @@
 import TeamCard from "../components/teamCard";
 
 export const metadata = {
-  title: "Bboothメンバー紹介ページ | 東洋大学ボランティアサークル",
+  title: "Bbooth メンバー",
   description:
-    "Bboothのメンバーを紹介するページ。役職や特徴と画像を貼り付け、このページでどのような人が活動し、役職を担っているのかを確認することができます。",
+    "東洋大学ボランティアサークルBboothのメンバー紹介ページ。",
   openGraph: {
-    title: "Bboothメンバー紹介ページ | 東洋大学ボランティアサークル",
+    title: "Bbooth メンバー",
     description: "東洋大学ボランティアサークルBboothのメンバー紹介ページ。",
     images: ["/images/10th_img.jpg"],
   },

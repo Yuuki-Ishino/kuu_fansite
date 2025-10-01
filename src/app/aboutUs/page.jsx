@@ -1,11 +1,11 @@
 import Section from "../components/section";
 
 export const metadata = {
-  title: "Bboothについて | 東洋大学ボランティアサークル",
+  title: "Bboothとは",
   description:
     "Bboothは東洋大学公認のボランティアサークルです。発足理由、活動内容を紹介しています。",
   openGraph: {
-    title: "Bboothについて | 東洋大学ボランティアサークル",
+    title: "Bboothとは",
     description:
       "東洋大学ボランティアサークルBbooth。発足理由、活動内容を紹介しています。",
     images: ["/images/logo02.jpg"],
