@@ -14,14 +14,8 @@ export const metadata = {
     "学生ボランティア",
   ],
   icons: {
-    icon: [
-      "/images/Bbooth_logo.ico",
-      { url: "/images/Bbooth_logo.ico", type: "image/x-icon"},
-      { url: "/images/Bbooth_logo.ico"},
-    ],
-    apple: [
-      { url: "/images/logo02.jpg", sizes: "180x180" },
-    ],
+    icon: "/favicon.ico",
+    apple: "/images/logo02.jpg",
   },
   openGraph: {
     title: "Bbooth",

@@ -19,25 +19,20 @@ export default function CallbackPage() {
         console.error("セッション取得失敗:", sessionError);
         return;
       }
+      console.log("session確認。" + session);
 
       const user = session.user;
-
-      if (!user.email.endsWith("@toyo.jp")) {
-        router.replace("/auth/logout");
-        return;
-      }
 
       try {
         // profiles に存在するか確認
         const { data: profile, error: profileError } = await supabase
           .from("profiles")
           .select("*")
-          .eq("uid", user.id)
+          .eq("user_id", user.id)
           .single();
 
         if (profileError && profileError.code !== "PGRST116") {
           console.error("profiles 取得失敗:", profileError);
-          return;
         }
 
         // 存在しなければ追加
@@ -45,9 +40,8 @@ export default function CallbackPage() {
           const { error: insertError } = await supabase
             .from("profiles")
             .insert({
-              uid: user.id,
+              user_id: user.id,
               email: user.email,
-              role: "visitor", // デフォルト role
             });
 
           if (insertError) {
@@ -57,7 +51,7 @@ export default function CallbackPage() {
         }
 
         // 成功したらトップページへ
-        router.replace("/auth/logout");
+        router.replace("/");
       } catch (err) {
         console.error("ログイン後処理でエラー:", err);
       }

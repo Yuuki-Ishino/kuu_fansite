@@ -1,13 +1,15 @@
 "use client";
+
 import { createClient } from "$/utils/supabase/client";
 
 export default function LoginPage() {
   const supabase = createClient();
+
   const handleLogin = async () => {
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: "/auth/callback", // OAuth完了後に戻るページ
+        redirectTo: "/auth/callback",
       },
     });
   };
