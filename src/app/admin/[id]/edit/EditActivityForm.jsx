@@ -3,7 +3,6 @@
 import { useState } from "react";
 import imageCompression from "browser-image-compression";
 import { createClient } from "$/utils/supabase/client";
-import { useFormStatus } from "react-dom";
 import dayjs from "dayjs";
 import { updateActivity } from "./updateActivity";
 import { redirect } from "next/navigation";
@@ -12,7 +11,6 @@ import { deleteActivity } from "./deleteActivity";
 export default function EditActivityForm({ activity }) {
   const supabase = createClient();
   const [file, setFile] = useState();
-  const { pending } = useFormStatus();
   const [previewUrl, setPreviewUrl] = useState(activity.imageUrl);
 
   // フォーム初期値
@@ -56,6 +54,7 @@ export default function EditActivityForm({ activity }) {
   };
 
   const handleSubmit = async (formData) => {
+
     let imageUrl = formData.get("imageUrl") || activity.imageUrl; // 既存の画像を維持
     const oldFilePath = activity.imageUrl?.split(
       "/storage/v1/object/public/activity-imgs/",
@@ -88,7 +87,7 @@ export default function EditActivityForm({ activity }) {
   };
 
   const handleDelete = async () => {
-    if (!confirm("本当に削除しますか？")) return;
+    if (!confirm("本当に削除しちゃうの？🥺")) return;
     await deleteActivity(activity);
   };
 

@@ -4,7 +4,7 @@ import { createClient } from "$/utils/supabase/server";
 import { revalidatePath } from "next/cache";
 
 export async function addActivity(formData) {
-  const supabase = createClient();
+  const supabase = await createClient();
 
   let imageUrl = "/images/nothing.jpg";
   const imageFile = formData.get("image");

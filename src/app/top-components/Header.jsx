@@ -10,16 +10,18 @@ function Header() {
   const supabase = createClient();
 
   const [session, setSession] = useState(null);
+  const [role, setRole] = useState(null);
   const [admin, setAdmin] = useState(false);
 
   //session and role check
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await supabase.auth.getSession();
-      setSession(data.session);
+      if (data.session) setSession(data.session);
 
-      const role = await getUserRole();
-      if (role === "admin") setAdmin(true);
+      const fetchedRole = await getUserRole();
+      setRole(fetchedRole);
+      if (fetchedRole === "admin") setAdmin(true);
     };
     fetchData();
 
@@ -77,7 +79,7 @@ function Header() {
         <ul className="hidden lg:flex">{renderNavItems()}</ul>
 
         {/* ハンバーガーアイコン */}
-        <Hamburger navItems={navItems} session={session} />
+        <Hamburger navItems={navItems} role={role} />
       </div>
     </header>
   );

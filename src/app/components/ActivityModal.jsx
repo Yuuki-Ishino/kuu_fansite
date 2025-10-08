@@ -1,16 +1,25 @@
 "use client";
 
 import { getUserRole } from "$/utils/supabase/getUserRole";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
+import Loading from "./Loading";
 import dayjs from "dayjs";
 import "dayjs/locale/ja";
 
 dayjs.locale("ja");
 
 export default function ActivityModal({ activity, onClose }) {
+  const router = useRouter();
   const [role, setRole] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleEdit = () => {
+    setLoading(true);
+    router.push(`/admin/${activity.id}/edit`);
+  };
 
   useEffect(() => {
     const fetchRole = async () => {
@@ -34,12 +43,12 @@ export default function ActivityModal({ activity, onClose }) {
         >
           {/* 編集ボタン */}
           {role === "admin" && (
-            <Link
-              href={`/admin/${activity.id}/edit`}
+            <button 
+              onClick={handleEdit}
               className="absolute top-2 right-15 text-white text-2xl font-bold"
             >
               i
-            </Link>
+            </button>
           )}
 
           {/* 閉じるボタン */}
@@ -86,6 +95,10 @@ export default function ActivityModal({ activity, onClose }) {
           <p className="mt-6 leading-relaxed whitespace-pre-line">
             {activity.description}
           </p>
+
+          {loading && (
+            <Loading />
+          )}
         </div>
       </div>
     </RemoveScroll>

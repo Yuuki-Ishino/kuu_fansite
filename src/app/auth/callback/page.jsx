@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "$/utils/supabase/client";
+import Loading from "@/app/components/Loading";
 
 export default function CallbackPage() {
   const router = useRouter();
@@ -11,17 +12,19 @@ export default function CallbackPage() {
   useEffect(() => {
     const handleLogin = async () => {
       // セッション取得
-      const {
-        data: { session },
-        error: sessionError,
-      } = await supabase.auth.getSession();
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
       if (sessionError || !session) {
         console.error("セッション取得失敗:", sessionError);
         return;
       }
-      console.log("session確認。" + session);
 
       const user = session.user;
+
+      if (!user.email.endsWith("@toyo.jp")){
+        await supabase.auth.signOut();
+        router.replace("/auth/login");
+        return;
+      }
 
       try {
         // profiles に存在するか確認
@@ -33,6 +36,7 @@ export default function CallbackPage() {
 
         if (profileError && profileError.code !== "PGRST116") {
           console.error("profiles 取得失敗:", profileError);
+          return;
         }
 
         // 存在しなければ追加
@@ -41,7 +45,9 @@ export default function CallbackPage() {
             .from("profiles")
             .insert({
               user_id: user.id,
+              name: name,
               email: user.email,
+              role: "visitor", // デフォルト role
             });
 
           if (insertError) {
@@ -61,8 +67,6 @@ export default function CallbackPage() {
   }, [router, supabase]);
 
   return (
-    <section className="flex items-center justify-center h-screen">
-      <div>Login...</div>
-    </section>
+    <Loading message="Login..." />
   );
 }

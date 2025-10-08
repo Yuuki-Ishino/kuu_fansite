@@ -3,10 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export default function Hamburger({ navItems, session}) {
+export default function Hamburger({ navItems, role}) {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const barColor = session ? "bg-green-400" : "bg-white";
+	let barColor = "bg-white";
+	if (role === "visitor")
+		barColor = "bg-green-400";
+	else if (role === "member")
+		barColor = "bg-purple-400";
+	else if (role === "admin")
+		barColor = "bg-red-600";
 	const toggleMenu = () => setIsOpen(!isOpen);
 
 	return (

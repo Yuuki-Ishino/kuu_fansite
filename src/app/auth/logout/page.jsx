@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "$/utils/supabase/client";
+import Loading from "@/app/components/Loading";
 
 export default function LogoutPage() {
   const supabase = createClient();
@@ -24,8 +25,6 @@ export default function LogoutPage() {
   }, [supabase, router]);
 
   return (
-    <section className="flex items-center justify-center h-screen">
-      <div className="text-white text-2xl">Logout...</div>
-    </section>
+    <Loading message="Logout..." />
   );
 }

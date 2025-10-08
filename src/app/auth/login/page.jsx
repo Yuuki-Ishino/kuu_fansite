@@ -6,6 +6,7 @@ export default function LoginPage() {
   const supabase = createClient();
 
   const handleLogin = async () => {
+    await supabase.auth.signOut();
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
