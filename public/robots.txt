@@ -1,4 +1,14 @@
+# *
 User-agent: *
-Disallow: /admin/
+Allow: /
 
+# クロール禁止
+Disallow: /supabaseTest/
+Disallow: /intro/
+Disallow: /contact/
+
+# Host
+Host: https://bbooth.vercel.app/
+
+# Sitemaps
 Sitemap: https://bbooth.vercel.app/sitemap.xml
