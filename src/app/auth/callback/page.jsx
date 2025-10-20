@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "$/utils/supabase/client";
+import Head from "next/head";
 import Loading from "@/app/components/Loading";
 
 export default function CallbackPage() {
@@ -67,6 +68,11 @@ export default function CallbackPage() {
   }, [router, supabase]);
 
   return (
-    <Loading message="Login..." />
+    <>
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
+      <Loading message="Loading" />
+    </>
   );
 }

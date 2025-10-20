@@ -6,6 +6,8 @@ Allow: /
 Disallow: /supabaseTest/
 Disallow: /intro/
 Disallow: /contact/
+Disallow: /admin/
+Disallow: /auth/
 
 # Host
 Host: https://bbooth.vercel.app/
