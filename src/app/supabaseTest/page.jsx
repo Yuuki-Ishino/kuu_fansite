@@ -8,15 +8,13 @@ export default function TestInsertPage() {
   const [message, setMessage] = useState("");
 
   const handleInsert = async () => {
-    const { data, error } = await supabase
-      .from("profiles")
-      .insert([
-        {
-          user_id: "1a7a2dd6-4882-43fe-8f96-0c00055e1e83",   // 固定のID
-          email: "test@example.com", // 固定のメール
-          role: "visitor",
-        },
-      ]);
+    const { data, error } = await supabase.from("profiles").insert([
+      {
+        user_id: "1a7a2dd6-4882-43fe-8f96-0c00055e1e83", // 固定のID
+        email: "test@example.com", // 固定のメール
+        role: "visitor",
+      },
+    ]);
 
     if (error) {
       console.error("挿入失敗:", error);

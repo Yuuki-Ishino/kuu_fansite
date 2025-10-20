@@ -13,7 +13,10 @@ export default function CallbackPage() {
   useEffect(() => {
     const handleLogin = async () => {
       // セッション取得
-      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+      const {
+        data: { session },
+        error: sessionError,
+      } = await supabase.auth.getSession();
       if (sessionError || !session) {
         console.error("セッション取得失敗:", sessionError);
         return;
@@ -21,7 +24,7 @@ export default function CallbackPage() {
 
       const user = session.user;
 
-      if (!user.email.endsWith("@toyo.jp")){
+      if (!user.email.endsWith("@toyo.jp")) {
         await supabase.auth.signOut();
         router.replace("/auth/login");
         return;

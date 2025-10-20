@@ -26,7 +26,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/top-image.jpg",   // 共通OG画像（相対パスでOK）
+        url: "/images/top-image.jpg", // 共通OG画像（相対パスでOK）
         width: 1200,
         height: 630,
         alt: "Bbooth サイトイメージ",
@@ -34,7 +34,6 @@ export const metadata = {
     ],
   },
 };
-
 
 export default function RootLayout({ children }) {
   return (

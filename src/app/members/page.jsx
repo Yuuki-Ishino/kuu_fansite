@@ -2,8 +2,7 @@ import TeamCard from "../components/teamCard";
 
 export const metadata = {
   title: "Bbooth メンバー",
-  description:
-    "東洋大学ボランティアサークルBboothのメンバー紹介ページ。",
+  description: "東洋大学ボランティアサークルBboothのメンバー紹介ページ。",
   openGraph: {
     title: "Bbooth メンバー",
     description: "東洋大学ボランティアサークルBboothのメンバー紹介ページ。",

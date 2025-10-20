@@ -61,21 +61,21 @@ export default function TimeSchedule() {
         </div>
 
         {/* タイムツリー */}
-        { onClickTT && (
+        {onClickTT && (
           <div className="pt-10">
             <iframe
               title="カレンダー"
               src="https://timetreeapp.com/public_calendars/bbooth/embed/list?calendar_name=true&frame_color=%23212121"
               style={{
-                width: '100%',
-                minHeight: '700px',
-                aspectRatio: '680 / 720',
-                border: 'none'
+                width: "100%",
+                minHeight: "700px",
+                aspectRatio: "680 / 720",
+                border: "none",
               }}
             ></iframe>
           </div>
         )}
-        
+
         {selectedActivity && (
           <ActivityModal
             activity={selectedActivity}

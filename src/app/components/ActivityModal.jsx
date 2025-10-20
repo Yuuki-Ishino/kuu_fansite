@@ -43,7 +43,7 @@ export default function ActivityModal({ activity, onClose }) {
         >
           {/* 編集ボタン */}
           {role === "admin" && (
-            <button 
+            <button
               onClick={handleEdit}
               className="absolute top-2 right-15 text-white text-2xl font-bold"
             >
@@ -96,9 +96,7 @@ export default function ActivityModal({ activity, onClose }) {
             {activity.description}
           </p>
 
-          {loading && (
-            <Loading />
-          )}
+          {loading && <Loading />}
         </div>
       </div>
     </RemoveScroll>

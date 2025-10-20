@@ -24,7 +24,5 @@ export default function LogoutPage() {
     logout();
   }, [supabase, router]);
 
-  return (
-    <Loading message="Logout..." />
-  );
+  return <Loading message="Logout..." />;
 }

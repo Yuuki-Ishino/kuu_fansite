@@ -54,7 +54,6 @@ export default function EditActivityForm({ activity }) {
   };
 
   const handleSubmit = async (formData) => {
-
     let imageUrl = formData.get("imageUrl") || activity.imageUrl; // 既存の画像を維持
     const oldFilePath = activity.imageUrl?.split(
       "/storage/v1/object/public/activity-imgs/",
