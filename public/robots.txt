@@ -3,9 +3,9 @@ User-agent: *
 Allow: /
 
 # クロール禁止
-Disallow: /supabaseTest/
-Disallow: /intro/
-Disallow: /contact/
+Disallow: /supabaseTest
+Disallow: /intro
+Disallow: /contact
 Disallow: /admin/
 Disallow: /auth/
 
