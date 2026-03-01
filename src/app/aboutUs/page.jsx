@@ -1,43 +1,121 @@
-import Section from "../components/section";
+import Accordion from "../components/Accordion";
 
-export const metadata = {
-  title: "Bboothとは",
-  description:
-    "Bboothは東洋大学公認のボランティアサークルです。発足理由、活動内容を紹介しています。",
-  openGraph: {
-    title: "Bboothとは",
-    description:
-      "東洋大学ボランティアサークルBbooth。発足理由、活動内容を紹介しています。",
-    images: ["/images/logo02.jpg"],
-  },
-};
-
-export default function AboutUs() {
+export default function FirstPage() {
   return (
-    <section>
-      <div className="py-16 px-6">
-        {/* トップ */}
-        <Section
-          title="Bboothとは"
-          description={`東洋大学公認ボランティアサークルBboothです。\n\n2011年3月11日の東日本大震災を機に発足し、「忘れないをカタチに。」をモットーに現在まで活動を続けています。\n\n震災、災害の悲惨さを風化させない。\n\n一人ひとりができることを考え、地域や他団体との連携を通じて、人と人との繋がりを大切にした活動を続けています。`}
-          image="/images/logo02.jpg"
-        />
+    <section className="bg-img no-bg min-h-screen text-white pt-20">
+      <div className="max-w-md mx-auto bg-[#1e46a3ee] px-5 py-5 space-y-12">
 
-        {/* ともしび */}
-        <Section
-          title="ともしびプロジェクト"
-          description={`ともしび活動とは、毎月11日にキャンドルを灯し、想いを伝え、想いを繋いでいくプロジェクトです。\n\n「忘れないをカタチに」を合言葉に2011年11月11日からスタートし、Bboothもこのプロジェクトに自主的に参加しています。\n\n毎月11日にメンバーたちでその月の活動を振り返り、キャンドルを灯して黙祷しています。`}
-          image="/images/candle01.jpg"
-        />
+        {/* ① ファーストビュー */}
+        <div className="text-center space-y-6">
+          <h1 className="text-2xl font-bold leading-relaxed">
+            初めての方へ<br />
+            ライブ参加ガイド📖
+          </h1>
 
-        {/* セクション4: お問い合わせ */}
-        <Section
-          title="お問い合わせ"
-          description="私たちの取り組みに関するご質問やご意見がありましたら、お気軽にご連絡ください。"
-          image="/images/candle02.jpg"
-          link="/#contact"
-          linkText="お問い合わせ"
-        />
+          <div className="space-y-2 text-sm opacity-80">
+            <p>✅ 1人参加全然OK！</p>
+            <p>✅ 初めての方大歓迎</p>
+            <p>✅ 難しいルールなし</p>
+          </div>
+
+          <a
+            href="#ticket"
+            className="block bg-pink-500 hover:bg-pink-600 transition py-4 rounded-xl font-bold text-lg"
+          >
+            🎟 チケットを発行する
+          </a>
+        </div>
+
+        {/* ② アコーディオンセクション */}
+        <div className="space-y-4">
+
+          <Accordion title="ライブまでってどんな流れ？雰囲気？">
+            <ul className="space-y-4">
+              <p className="text-xl font-bold mt-6 mb-4">主な流れ</p>
+              <li className="font-semibold">① チケット発行</li>
+              <p className="pl-4">⇨事前に発行しておくことで、入場がスムーズになり、お得に入場することができます。</p>
+              <li className="font-semibold">② 会場へ向かう</li>
+              <li className="font-semibold">③ QR提示で入場</li>
+              <li className="font-semibold">④ ライブを楽しむ</li>
+              <p className="pl-4">⇨各グループが順番に出演します。１グループあたり２〜３曲ほど披露するのが一般的です。</p>
+              <li className="font-semibold">⑤ 特典会でお話できます</li>
+              <p className="pl-4">⇨ライブ後にメンバーと写真を撮ったり話せる時間があります。</p>
+              <br/>
+              
+              <p className="text-xl font-bold mt-6 mb-2">雰囲気</p>
+              <li>・ ライブ開始までは比較的静かに待っている人が多いです。</li>
+              <li>・ お目当てのグループのライブが始まると、前に出て近くで観る人もいれば、後ろでゆっくり観る人もいます。</li>
+              <li>・ コールを一緒にすることでより一層楽しめます。</li>
+              <li>・初めての方は後方で様子を見るのもOKです!</li>
+            </ul>
+          </Accordion>
+
+          <Accordion title="チケット発行の仕方">
+
+          </Accordion>
+
+          <Accordion title="会場までの行き方">
+            <div className="space-y-3 text-sm opacity-80">
+              <p>渋谷駅から徒歩5分</p>
+
+              <iframe
+                src="https://www.google.com/maps/embed?..."
+                className="w-full h-48 rounded-lg"
+                loading="lazy"
+              />
+            </div>
+          </Accordion>
+
+          <Accordion title="持ち物・ルール">
+            <ul className="space-y-2">
+              <p className="text-xl font-bold mb-4">持ち物</p>
+              <li>・ スマホ（QR提示用）</li>
+              <li>・ チケット代・ドリンク代</li>
+              <li>・ ペンライト（任意）</li>
+              <br/>
+              <p className="text-xl font-bold mt-6 mb-4">ルール</p>
+              <li>・同じ色のペンライトを振る際は縦もしくは横に連続して並ぶのをなるべく避けましょう</li>
+              <li>・お目当てのグループを見終わったら、他の人に見やすい位置を譲りましょう</li>
+            </ul>
+          </Accordion>
+
+          <Accordion title="よくある質問">
+            <div className="space-y-3">
+              <div>
+                <p className="font-bold">Q. 1人でも大丈夫？</p>
+                <p>A. 一人で参加する人もよくいます。</p>
+              </div>
+              <div>
+                <p className="font-bold">Q. コールできません</p>
+                <p>A. 見るだけでも全然OK!</p>
+              </div>
+              <div>
+                <p className="font-bold">Q. 当日券でもいい？</p>
+                <p>A. もちろん大丈夫ですが、入場がスムーズに行えるのと金額的にお得なので、来場者の８割ほどが事前にチケット発行しています。</p>
+              </div>
+            </div>
+          </Accordion>
+
+        </div>
+
+        {/* ③ 下部CTA */}
+        <div id="ticket" className="pt-10 text-center space-y-6">
+          <h2 className="text-xl font-bold">↓ 次のライブはこちら ↓</h2>
+
+          <div className="pt-">
+            <iframe
+              title="カレンダー"
+              src="https://timetreeapp.com/public_calendars/latte/embed/list?calendar_name=true&frame_color=%2347b2f7"
+              style={{
+                width: "100%",
+                minHeight: "400px",
+                aspectRatio: "680 / 720",
+                border: "none",
+              }}
+            ></iframe>
+          </div>
+        </div>
+
       </div>
     </section>
   );

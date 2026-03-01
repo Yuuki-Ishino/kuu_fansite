@@ -10,13 +10,7 @@ function ContactSection() {
             <h3 className="text-[20px] font-bold mb-5">CONTACT</h3>
             <h2 className="text-[30px] font-bold mb-10">お問い合わせ</h2>
             <p className="leading-[1.8] mb-[20px]">
-              ボランティアの依頼・相談は以下の公式Instagramまでご連絡ください。
-            </p>
-            <p className="leading-[1.8] mb-[20px]">
-              新歓情報は公式Xにて掲載しています。
-            </p>
-            <p className="leading-[1.8] mb-[20px]">
-              サークルについての個人的な質問等はLINEで受け付けています。
+              個人的な質問等あれば、以下のInstagramのDMにてお申し付けください。（返信はスタンプのみとなっております。）
             </p>
           </div>
 
@@ -42,16 +36,13 @@ function ContactSection() {
               <FaXTwitter />
             </a>
 
-            {/* LINE */}
-            <a
-              href="https://line.me/ti/p/Fp2SOvqRrO"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-4xl hover:text-green-400 active:text-green-400 transition-colors"
-            >
-              <FaLine />
-            </a>
           </div>
+
+          <p className="leading-[1.8] mt-[20px]">
+              Instagram : 普段の生活や写真等
+              <br/>
+              X : スケジュール等の情報や個人的なつぶやき
+            </p>
         </div>
       </div>
     </section>

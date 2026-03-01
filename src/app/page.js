@@ -23,7 +23,7 @@ export default function Page() {
       <MainVisual />
       <MessageSection />
       <TimeSchedule />
-      <ActivitySection />
+      {/* <ActivitySection /> */}
       <ContactSection imageSrc="/images/top-image.jpg" />
     </div>
   );

@@ -2,9 +2,9 @@
 
 section,
 footer {
-  background-color: #181619;
+  background-color: #1e46a3ee;
 }
-
+/* #181619 */
 section.no-bg {
   background-color: transparent;
 }
@@ -12,16 +12,16 @@ section.no-bg {
 .bg-img::before {
   content: "";
   position: fixed;
-  height: 800px;
+  /* height: 800px; */
   inset: 0;
   z-index: -1;
-  background-image: url("./top-image.jpg");
+  background-image: url("./kuu-top1.jpg");
   background-size: cover;
   background-position: center;
 }
 
 @media (max-width: 770px) {
   .bg-img::before {
-    background-image: url("./top-img01.jpg");
+    background-image: url("./kuu-top1.jpg");
   }
 }

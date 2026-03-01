@@ -2,9 +2,9 @@ import Link from "next/link";
 
 function Footer() {
   const navItems = [
-    { href: "/aboutUs", label: "私たちについて" },
+    { href: "/aboutUs", label: "初めての方へ" },
     { href: "/members", label: "メンバー紹介" },
-    { href: "/activities", label: "活動一覧" },
+    { href: "/activities", label: "会場一覧" },
     { href: "/#contact", label: "お問い合わせ" },
   ];
 
@@ -24,7 +24,9 @@ function Footer() {
     <footer className="text-white text-center text-[12px]">
       <div className="w-[90%] mx-auto max-w-[1280px] py-5">
         <a href="./" className="text-[20px] font-bold inline-block mb-10">
-          Bbooth 2025
+          Dream & Dream
+          <br/>
+          Kuu 
         </a>
 
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-2 mb-10">

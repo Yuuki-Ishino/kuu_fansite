@@ -9,10 +9,10 @@ function MainVisual() {
 				/>
 			</div> */}
       <div className="w-[90%] max-w-[1280px] mx-auto h-full relative">
-        <div className="absolute bottom-[100px] left-0">
-          <h1 className="text-[70px] font-bold text-white mb-6">Bbooth</h1>
+        <div className="absolute bottom-[40px] left-0 w-full bg-black/20">
+          <h1 className="text-[70px] font-bold text-white ">Ku</h1>
           <p className="text-[24px] font-black text-white">
-            ＃忘れないをカタチに。
+            #ライブ・会場・ルール・特典のご案内
           </p>
         </div>
       </div>

@@ -8,28 +8,16 @@ function MessageSection() {
         <div className="flex flex-col justify-between">
           {/* メッセージ */}
           <div className="w-[90%] mb-[40px]">
-            <p className="text-[20px] font-bold mb-5">ABOUT US</p>
+            <p className="text-[20px] font-bold mb-5">For First-Time Visitors</p>
             <p className="text-[35px] font-bold leading-[1.6]">
-              東洋大学公認
-              <br />
-              ボランティアサークル
-              <br />
-              Bbooth
+              初めての方へ
             </p>
           </div>
 
           {/* サブメッセージ */}
           <div className="">
             <p className="text-[20px] leading-[1.8] mb-10">
-              「忘れないをカタチに」し続け、 2025年も無事活動できています。
-              <br />
-              <br />
-              やる時はやる、遊んで楽しむ時は楽しむ、
-              そんなメリハリを大切にしています。
-              <br />
-              <br />
-              ボランティアをもっと身近に、 そして想いを伝え、繋いでいく。
-              <br />
+              安心してライブにお越しいただけるように情報をまとめました。
             </p>
             <div className="flex justify-center">
               <Button href="/aboutUs">READ MORE</Button>

@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getLatestActivities } from "$/services/supabaseApi";
 import dayjs from "dayjs";
 import "dayjs/locale/ja";
-import ActivityModal from "../components/ActivityModal";
 
 dayjs.locale("ja");
 
@@ -15,7 +13,7 @@ export default function TimeSchedule() {
 
   useEffect(() => {
     const fetchActivities = async () => {
-      const data = await getLatestActivities(10);
+      const data = null;
       setLatestItems(data);
     };
     fetchActivities();
@@ -26,25 +24,6 @@ export default function TimeSchedule() {
       <div className="w-[90%] mx-auto max-w-[1280px] pb-20 border-b">
         <h3 className="text-[20px] font-bold mb-5">SCHEDULE</h3>
         <h2 className="text-[30px] font-bold mb-[14px]">活動予定</h2>
-
-        <ul className="w-[90%] max-w-[600px] pl-5 flex flex-col justify-between">
-          {latestItems.map((item) => (
-            <li
-              key={item.id}
-              className="border-b border-gray-300 pb-2 mb-3 cursor-pointer"
-              onClick={() => setSelectedActivity(item)}
-            >
-              <p className="text-sm text-gray-300">
-                {item.date
-                  ? item.subdate
-                    ? `${dayjs(item.date).format("M月D日(ddd)")} - ${dayjs(item.subdate).format("M月D日(ddd)")}`
-                    : dayjs(item.date).format("M月D日(ddd)")
-                  : "未確定"}
-              </p>
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-            </li>
-          ))}
-        </ul>
 
         <div className="pt-10  flex justify-center">
           <button
@@ -65,10 +44,10 @@ export default function TimeSchedule() {
           <div className="pt-10">
             <iframe
               title="カレンダー"
-              src="https://timetreeapp.com/public_calendars/bbooth/embed/list?calendar_name=true&frame_color=%23212121"
+              src="https://timetreeapp.com/public_calendars/latte/embed/monthly?calendar_name=true&frame_color=%2347b2f7"
               style={{
                 width: "100%",
-                minHeight: "700px",
+                minHeight: "400px",
                 aspectRatio: "680 / 720",
                 border: "none",
               }}

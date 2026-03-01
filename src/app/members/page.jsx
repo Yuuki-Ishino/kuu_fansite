@@ -15,15 +15,15 @@ export default function memberIntro() {
     <section className="py-25">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-semibold text-center text-white mb-8">
-          11th 幹部
+          PROFILE 
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <TeamCard
-            name="大平 麗音"
-            subname="おおひられいん"
-            role="代表"
+            name="くう"
+            subname="青"
+            role="Kuu"
             image="/images/members/rein.jpg"
-            description="Bbooth愛はナンバーワン。愛と責任感の強さで11thを引っ張る。"
+            description="ダンスボーカルビジュアル担当"
           />
           <TeamCard
             name="新井 快"
