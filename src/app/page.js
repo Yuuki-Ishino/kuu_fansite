@@ -1,7 +1,7 @@
 // app/page.jsx
 import MainVisual from "./top-components/MainVisual";
 import FirstTime from "./top-components/FirstTime";
-import TimeSchedule from "./top-components/Schedule";
+import Schedule from "./top-components/Schedule";
 import Events from "./top-components/Events";
 import ContactSection from "./top-components/ContactSection";
 
@@ -22,7 +22,7 @@ export default function Page() {
     <div className="bg-img max-w-2xl mx-auto">
       <MainVisual />
       <FirstTime />
-      <TimeSchedule />
+      <Schedule />
       <Events />
       <ContactSection imageSrc="/images/top-image.jpg" />
     </div>
