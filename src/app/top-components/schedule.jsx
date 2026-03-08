@@ -1,4 +1,4 @@
-export default function TimeSchedule() {
+export default function Schedule() {
 
   return (
     <section className="text-white pt-20 lg:py-20">
