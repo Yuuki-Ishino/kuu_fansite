@@ -15,7 +15,7 @@ function FirstTime() {
           <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
             <Image
               src="/images/events/stamp.jpg"
-              alt=""
+              alt="初回特典の画像"
               fill
               className="object-cover"
             />

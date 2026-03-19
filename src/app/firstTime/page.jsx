@@ -92,7 +92,6 @@ export default function FirstPage() {
               </p>
               <p className="pl-4 text-sm ">
                 そのQRコードで入場するのでお忘れなく<br/>
-                完了したら「くう」に伝えてくれるとめちゃ嬉しい☺️
               </p>
 
             </div>
