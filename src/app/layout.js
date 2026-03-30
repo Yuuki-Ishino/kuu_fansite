@@ -4,7 +4,7 @@ import "../styles/globals.css";
 
 export const metadata = {
   title: "くう | Dream & Dream",
-  description: "メンズ地下アイドル Dream & Dream「くう」の自作ファンサイト。ライブ情報、イベント、会場案内などを掲載。",
+  description: "Dream & Dream「くう」の自作ファンサイト。ライブ情報、イベント、会場案内などを掲載。",
   metadataBase: new URL("https://kuu-fansite.vercel.app"),
 
   keywords: [
