@@ -154,7 +154,7 @@ export default function FirstPage() {
               <p className="text-xl font-bold mb-4">持ち物</p>
               <li>・ スマホ（QR提示用）</li>
               <li>・ チケット代・ドリンク代</li>
-              <li>・ ペンライト（任意）</li>
+              <li>・ ペンライト（貸し出しもあるので任意！）</li>
               <br/>
               <p className="text-xl font-bold mt-6 mb-4">マナー</p>
               <li>・同じ色のペンライトを振る際は縦もしくは横に連続して並ぶのをなるべく避けましょう</li>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Schedule() {
 
   return (
@@ -20,10 +22,19 @@ export default function Schedule() {
           ></iframe>
         </div>
 
-        <p className="pl-4 pt-2 text-sm ">
+        <p className="pl-4 py-2 text-sm ">
           ※ アプリをまだ入れていない場合は、先にダウンロードしましょう!<br/>
           ※ ダウンロード済みの方はLatteカレンダーをフォローしましょう!
         </p>
+
+        <div className="relative w-full aspect-[4/7] rounded-lg overflow-hidden">
+          <Image
+            src="/images/events/g202604.JPG"
+            alt="イベントカレンダー"
+            fill
+            className="object-cover"
+          />
+        </div>
 
       </div>
     </section>

@@ -20,24 +20,6 @@ const members = {
 		X: "https://x.com/ku_dredre",
 		tiktok: "https://www.tiktok.com/@ku_dredre"
   },
-  Ayase: {
-    name: "あやせ",
-		subname: "Ayase",
-		color: "red",
-		old: "24",
-		birth: "3/3",
-		height: "175cm",
-		weight: "57kg",
-		brood: "B",
-		favo: "ちいかわ",
-		nfavo: "絶叫系アトラクション",
-		mbti: "INTP",
-		image: "/images/members/Ayase.JPG",
-		description: "自認ハチワレで生きてます",
-		instagram: "https://www.instagram.com/ayase_dredre/",
-		X: "https://x.com/ayase_dredre",
-		tiktok: "https://www.tiktok.com/@ayase_dredre"
-  },
   Hinase: {
     name: "ひなせ",
 		subname: "Hinase",
@@ -55,6 +37,24 @@ const members = {
 		instagram: "https://www.instagram.com/hinase__dredre/",
 		X: "https://x.com/hinase_dredre",
 		tiktok: "https://www.tiktok.com/@hinase_dredre"
+  },
+  Ayase: {
+    name: "あやせ",
+		subname: "Ayase",
+		color: "red",
+		old: "24",
+		birth: "3/3",
+		height: "175cm",
+		weight: "57kg",
+		brood: "B",
+		favo: "ちいかわ",
+		nfavo: "絶叫系アトラクション",
+		mbti: "INTP",
+		image: "/images/members/Ayase.JPG",
+		description: "自認ハチワレで生きてます",
+		instagram: "https://www.instagram.com/ayase_dredre/",
+		X: "https://x.com/ayase_dredre",
+		tiktok: "https://www.tiktok.com/@ayase_dredre"
   },
   Shino: {
     name: "しの",
@@ -74,23 +74,23 @@ const members = {
 		X: "https://x.com/sino_dredre",
 		tiktok: "https://www.tiktok.com/@sino_dredre"
   },
-  Taiyou: {
-    name: "たいよう",
-		subname: "Taiyou",
-		color: "yellow",
-		old: "19",
-		birth: "4/26",
-		height: "174cm",
-		weight: "66kg",
+  Toramaru: {
+    name: "とらまる",
+		subname: "Toramaru",
+		color: "orange",
+		old: "21",
+		birth: "8/3",
+		height: "1800mm",
+		weight: "失礼な！",
 		brood: "O型",
-		favo: "旅行、ポーカー",
-		nfavo: "ピーマン",
-		mbti: "ESFP",
-		image: "/images/members/Taiyou.JPG",
-		description: "愛に来てー！",
-		instagram: "https://www.instagram.com/taiyou_dredre/",
-		X: "https://x.com/taiyou_dredre",
-		tiktok: "https://www.tiktok.com/@taiyou_dredre"
+		favo: "肉食べること",
+		nfavo: "ライオン",
+		mbti: "「後でやる」",
+		image: "/images/members/Toramaru.JPG",
+		description: "「一緒にガオーしよう」",
+		instagram: "https://www.instagram.com/toramaru_dredre/",
+		X: "https://x.com/toramaru_dredre",
+		tiktok: "https://www.tiktok.com/@toramaru_dredre"
   },
   Kaname: {
     name: "かなめ",
@@ -110,29 +110,29 @@ const members = {
 		X: "https://x.com/kaname_dredre",
 		tiktok: "https://www.tiktok.com/@kaname_dredre"
   },
-  Toramaru: {
-    name: "とらまる",
-		subname: "Toramaru",
-		color: "orange",
-		old: "21",
-		birth: "8/3",
-		height: "1800mm",
-		weight: "失礼な！",
+  Taiyou: {
+    name: "たいよう",
+		subname: "Taiyou",
+		color: "yellow",
+		old: "19",
+		birth: "4/26",
+		height: "174cm",
+		weight: "66kg",
 		brood: "O型",
-		favo: "肉食べること",
-		nfavo: "ライオン",
-		mbti: "「後でやる」",
-		image: "/images/members/Toramaru.JPG",
-		description: "「一緒にガオーしよう」",
-		instagram: "https://www.instagram.com/toramaru_dredre/",
-		X: "https://x.com/toramaru_dredre",
-		tiktok: "https://www.tiktok.com/@toramaru_dredre"
+		favo: "旅行、ポーカー",
+		nfavo: "ピーマン",
+		mbti: "ESFP",
+		image: "/images/members/Taiyou.JPG",
+		description: "愛に来てー！",
+		instagram: "https://www.instagram.com/taiyou_dredre/",
+		X: "https://x.com/taiyou_dredre",
+		tiktok: "https://www.tiktok.com/@taiyou_dredre"
   },
 };
 
-export default async function MemberPage({ params }) {
-	const { name } = await params;
-  const member = await members[name];
+export default function MemberPage({ params }) {
+	const { name } = params;
+  const member = members[name];
 
   if (!member) {
     return <div className="p-10">Member not found</div>;
@@ -181,7 +181,7 @@ export default async function MemberPage({ params }) {
 
 				{/* Tiktok */}
 				<a
-				href={member.X}
+				href={member.tiktok}
 				target="_blank"
 				rel="noopener noreferrer"
 				className="text-4xl hover:text-red-400 active:text-red-400 transition-colors"

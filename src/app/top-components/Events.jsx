@@ -10,7 +10,7 @@ export default function Events() {
         
         <div className="relative w-full aspect-[4.2/3] rounded-lg overflow-hidden">
 					<Image
-					  src="/images/events/202603.JPG"
+					  src="/images/events/202604.JPG"
 					  alt="イベントカレンダー"
 					  fill
 					  className="object-cover"
@@ -19,7 +19,7 @@ export default function Events() {
 
 				<p className="pl-4 pt-2 text-sm ">
           ※ 無銭イベントとは入場料が無料になっているイベントになります。<br/>
-					（無銭ライブはドリンク代が必要になります。）
+					（無銭ライブは別途ドリンク代が必要になります。）
         </p>
 
 				<h2 className="text-[30px] font-bold my-[14px]">イベント</h2>
@@ -35,21 +35,14 @@ export default function Events() {
 
 					<div className="relative w-full aspect-[4.2/3] rounded-lg overflow-hidden">
 						<Image
-							src="/images/events/e2.PNG"
-							alt="e2_schedule"
-							fill
-							className="object-cover"
-						/>
-					</div>
-
-					<div className="relative w-full aspect-[4.2/3] rounded-lg overflow-hidden">
-						<Image
 							src="/images/events/e4.jpg"
 							alt="e4_schedule"
 							fill
 							className="object-cover"
 						/>
 					</div>
+
+					
 
 				</div>
 
