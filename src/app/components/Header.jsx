@@ -6,7 +6,7 @@ function Header() {
     { href: "/firstTime", label: "🔰初めての方へ" },
     { href: "/members", label: "メンバー紹介" },
     { href: "/stage", label: "会場一覧" },
-    { href: "/#contact", label: "お問い合わせ" },
+    { href: "/#contact", label: "SNS" },
   ];
 
   const navItems = baseNavItems;

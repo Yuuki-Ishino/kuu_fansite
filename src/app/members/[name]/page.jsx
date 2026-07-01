@@ -14,7 +14,7 @@ const members = {
 		favo: "パソコン",
 		nfavo: "起きること",
 		mbti: "ENTP",
-		image: "/images/members/Kuu.JPG",
+		image: "/images/members/kuu.PNG",
 		description: "お家のワンちゃんの名前もくうです。",
 		instagram: "https://www.instagram.com/ku_dredre/",
 		X: "https://x.com/ku_dredre",
@@ -32,7 +32,7 @@ const members = {
 		favo: "牛乳！",
 		nfavo: "あやせと間違えられること😡",
 		mbti: "ENTP",
-		image: "/images/members/Hinase.JPG",
+		image: "/images/members/hinase.PNG",
 		description: "そういうこと",
 		instagram: "https://www.instagram.com/hinase__dredre/",
 		X: "https://x.com/hinase_dredre",
@@ -50,7 +50,7 @@ const members = {
 		favo: "ちいかわ",
 		nfavo: "絶叫系アトラクション",
 		mbti: "INTP",
-		image: "/images/members/Ayase.JPG",
+		image: "/images/members/ayase.PNG",
 		description: "自認ハチワレで生きてます",
 		instagram: "https://www.instagram.com/ayase_dredre/",
 		X: "https://x.com/ayase_dredre",
@@ -68,7 +68,7 @@ const members = {
 		favo: "ハンバーグ",
 		nfavo: "嘘",
 		mbti: "ABCD",
-		image: "/images/members/Shino.JPG",
+		image: "/images/members/shino.PNG",
 		description: "ドリーム見せるぜやっほい",
 		instagram: "https://www.instagram.com/sino_dredre/",
 		X: "https://x.com/sino_dredre",
@@ -86,7 +86,7 @@ const members = {
 		favo: "肉食べること",
 		nfavo: "ライオン",
 		mbti: "「後でやる」",
-		image: "/images/members/Toramaru.JPG",
+		image: "/images/members/toramaru.PNG",
 		description: "「一緒にガオーしよう」",
 		instagram: "https://www.instagram.com/toramaru_dredre/",
 		X: "https://x.com/toramaru_dredre",
@@ -104,7 +104,7 @@ const members = {
 		favo: "寝ること",
 		nfavo: "人混み、クラブ",
 		mbti: "INTP-t",
-		image: "/images/members/Kaname.JPG",
+		image: "/images/members/kaname.PNG",
 		description: "りんどーきっず",
 		instagram: "https://www.instagram.com/kaname_dredre/",
 		X: "https://x.com/kaname_dredre",
@@ -122,7 +122,7 @@ const members = {
 		favo: "旅行、ポーカー",
 		nfavo: "ピーマン",
 		mbti: "ESFP",
-		image: "/images/members/Taiyou.JPG",
+		image: "/images/members/taiyou.PNG",
 		description: "愛に来てー！",
 		instagram: "https://www.instagram.com/taiyou_dredre/",
 		X: "https://x.com/taiyou_dredre",
@@ -139,8 +139,8 @@ export default async function MemberPage({ params }) {
   }
 
   return (
-	<section className="py-20">
-    <div className="text-white max-w-2xl w-[90%] mx-auto">
+	<section className="pt-20 bg-img">
+    <div className="text-white max-w-2xl w-[90%] mx-auto bg-black/90">
 
       {/* アー写 */}
       <div className="relative aspect-[3/4.5]">
@@ -191,7 +191,7 @@ export default async function MemberPage({ params }) {
 			</div>
 
       {/* プロフィール */}
-      <div className="mt-16 space-y-4 text-lg">
+      <div className="py-16 space-y-4 text-lg">
 
         <div className="flex">
           <span className="w-40 font-semibold">担当カラー</span>

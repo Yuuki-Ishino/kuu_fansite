@@ -12,12 +12,12 @@ export const metadata = {
 
 export default function memberIntro() {
   return (
-    <section className="py-25">
-      <div className="max-w-2xl mx-auto px-4">
+    <section className="pt-25 bg-img">
+      <div className="max-w-2xl mx-auto px-4 pb-3">
         <h2 className="text-3xl font-semibold text-center text-white mb-8">
           PROFILE 
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3">
           <TeamCard
             name="くう"
             subname="Kuu"
@@ -27,7 +27,7 @@ export default function memberIntro() {
             favo="パソコン"
             nfavo=""
             mbti="ENTP"
-            image="/images/members/Kuu.JPG"
+            image="/images/members/kuu.PNG"
             description="ダンスボーカルビジュアル担当"
           />
 
@@ -40,7 +40,7 @@ export default function memberIntro() {
             favo="パソコン"
             nfavo=""
             mbti="ENTP"
-            image="/images/members/Ayase.JPG"
+            image="/images/members/ayase.PNG"
             description="ダンスボーカルビジュアル担当"
           />
 
@@ -53,7 +53,7 @@ export default function memberIntro() {
             favo="パソコン"
             nfavo=""
             mbti="ENTP"
-            image="/images/members/Hinase.JPG"
+            image="/images/members/hinase.PNG"
             description="ダンスボーカルビジュアル担当"
           />
 
@@ -66,33 +66,7 @@ export default function memberIntro() {
             favo="パソコン"
             nfavo=""
             mbti="ENTP"
-            image="/images/members/Shino.JPG"
-            description="ダンスボーカルビジュアル担当"
-          />
-
-          <TeamCard
-            name="たいよう"
-            subname="Taiyou"
-            color="黄"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
-            image="/images/members/Taiyou.JPG"
-            description="ダンスボーカルビジュアル担当"
-          />
-
-          <TeamCard
-            name="かなめ"
-            subname="Kaname"
-            color="緑"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
-            image="/images/members/Kaname.JPG"
+            image="/images/members/shino.PNG"
             description="ダンスボーカルビジュアル担当"
           />
 
@@ -105,7 +79,33 @@ export default function memberIntro() {
             favo="パソコン"
             nfavo=""
             mbti="ENTP"
-            image="/images/members/Toramaru.JPG"
+            image="/images/members/toramaru.PNG"
+            description="ダンスボーカルビジュアル担当"
+          />
+
+          <TeamCard
+            name="たいよう"
+            subname="Taiyou"
+            color="黄"
+            birth="9月14日"
+            brood="A"
+            favo="パソコン"
+            nfavo=""
+            mbti="ENTP"
+            image="/images/members/taiyou.PNG"
+            description="ダンスボーカルビジュアル担当"
+          />
+
+          <TeamCard
+            name="かなめ"
+            subname="Kaname"
+            color="緑"
+            birth="9月14日"
+            brood="A"
+            favo="パソコン"
+            nfavo=""
+            mbti="ENTP"
+            image="/images/members/kaname.PNG"
             description="ダンスボーカルビジュアル担当"
           />
         </div>

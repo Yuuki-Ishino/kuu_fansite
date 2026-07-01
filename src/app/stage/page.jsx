@@ -7,7 +7,7 @@ export default async function Page({ searchParams }) {
 
   return (
     <section className="bg-img no-bg min-h-screen text-white">
-      <div className="max-w-2xl mx-auto bg-[#1e46a3ee] px-5 py-15 space-y-12">
+      <div className="max-w-2xl mx-auto bg-[#000000dd] px-5 py-15 space-y-12">
 
         <div id="ticket" className="pt-10 text-center space-y-6">
           <h2 className="text-4xl font-bold">会場一覧</h2>

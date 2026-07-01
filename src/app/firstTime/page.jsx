@@ -5,20 +5,13 @@ import Image from "next/image";
 export default function FirstPage() {
   return (
     <section className="bg-img no-bg min-h-screen text-white">
-      <div className="max-w-2xl mx-auto bg-[#1e46a3ee] px-5 py-20 space-y-12">
+      <div className="max-w-2xl mx-auto bg-[#000000c0] px-5 py-20 space-y-12">
 
         {/* ① ファーストビュー */}
         <div className="text-center space-y-6">
           <h1 className="text-2xl font-bold leading-relaxed">
             初めての方へ<br />
-            ライブ参加ガイド📖
           </h1>
-
-          <div className="space-y-2 text-sm opacity-80">
-            <p>✅ 1人参加全然OK !</p>
-            <p>✅ 初めての方大歓迎</p>
-            <p>✅ 難しいルールなし</p>
-          </div>
 
           <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
             <Image
@@ -31,8 +24,7 @@ export default function FirstPage() {
 
         </div>
 
-        {/* ② アコーディオンセクション */}
-        <div className="space-y-4">
+        {/* <div className="space-y-4">
 
           <Accordion title="🎟 チケット発行の仕方">
             <div className="mt-5">
@@ -187,7 +179,7 @@ export default function FirstPage() {
             </div>
           </Accordion>
 
-        </div>
+        </div> */}
 
         {/* ③ 下部CTA */}
         <div id="ticket" className="pt-10 text-center space-y-6">

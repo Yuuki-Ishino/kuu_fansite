@@ -12,22 +12,22 @@ function FirstTime() {
             <h2 className="text-[30px] font-bold mb-[14px]">初めての方へ</h2>
           </div>
 
-          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
+          {/* <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
             <Image
               src="/images/events/stamp.jpg"
               alt="初回特典の画像"
               fill
               className="object-cover"
             />
-          </div>
+          </div> */}
 
           {/* サブメッセージ */}
           <div className="mt-4">
             <p className="text-[20px] leading-[1.8] mb-10">
-              安心してライブを楽しめるように情報をまとめました。
+              初回特典
             </p>
             <div className="flex justify-center">
-              <Button href="/firstTime">READ MORE</Button>
+              <Button href="/firstTime">MORE</Button>
             </div>
           </div>
         </div>
