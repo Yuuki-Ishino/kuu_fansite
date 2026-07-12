@@ -38,6 +38,11 @@ const events = [
     alt: "e6_schedule",
     href: "https://x.com/Latte_2025?s=20",
   },
+  {
+    src: "/images/events/e20260701.jpeg",
+    alt: "e7_schedule",
+    href: "https://x.com/dredre_latte/status/2074500408345829832?s=20",
+  },
 ];
 
 export default function Events() {
