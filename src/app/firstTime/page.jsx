@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function FirstPage() {
   return (
-    <section className="bg-img no-bg min-h-screen text-white">
-      <div className="max-w-2xl mx-auto bg-[#000000c0] px-5 py-20 space-y-12">
+    <section className="bg-img min-h-screen text-white">
+      <div className="max-w-2xl mx-auto px-5 py-20 space-y-12">
 
         {/* ① ファーストビュー */}
         <div className="text-center space-y-6">
