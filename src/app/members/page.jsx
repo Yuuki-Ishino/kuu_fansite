@@ -22,91 +22,49 @@ export default function memberIntro() {
             name="くう"
             subname="Kuu"
             color="青"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
             image="/images/members/kuu.PNG"
-            description="ダンスボーカルビジュアル担当"
           />
 
           <TeamCard
             name="あやせ"
             subname="Ayase"
             color="赤"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
             image="/images/members/ayase.PNG"
-            description="ダンスボーカルビジュアル担当"
           />
 
           <TeamCard
             name="ひなせ"
             subname="Hinase"
             color="白"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
             image="/images/members/hinase.PNG"
-            description="ダンスボーカルビジュアル担当"
           />
 
           <TeamCard
             name="しの"
-            subname="Shino"
+            subname="Sino"
             color="紫"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
             image="/images/members/shino.PNG"
-            description="ダンスボーカルビジュアル担当"
           />
 
           <TeamCard
             name="とらまる"
             subname="Toramaru"
             color="橙"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
             image="/images/members/toramaru.PNG"
-            description="ダンスボーカルビジュアル担当"
           />
 
           <TeamCard
             name="たいよう"
             subname="Taiyou"
             color="黄"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
             image="/images/members/taiyou.PNG"
-            description="ダンスボーカルビジュアル担当"
           />
 
           <TeamCard
             name="かなめ"
             subname="Kaname"
             color="緑"
-            birth="9月14日"
-            brood="A"
-            favo="パソコン"
-            nfavo=""
-            mbti="ENTP"
             image="/images/members/kaname.PNG"
-            description="ダンスボーカルビジュアル担当"
           />
         </div>
       </div>

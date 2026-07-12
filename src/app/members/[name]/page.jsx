@@ -58,7 +58,7 @@ const members = {
   },
   Shino: {
     name: "しの",
-		subname: "Shino",
+		subname: "Sino",
 		color: "purple",
 		old: "20",
 		birth: "10月25日",
